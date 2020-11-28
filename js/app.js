@@ -78,3 +78,30 @@ for (p = 0; p < arr.length; p++) {
     console.log(arr[p][q]);
     }
 }
+
+function multiply(a,b) {
+    return a * b;
+}
+console.log(multiply(2,7));
+
+
+
+document.getElementById('divtd').innerHTML = '</h3>YAYAYAY</h3>';
+document.getElementById('divtd').style.backgroundColor = 'green';
+
+function ask(question, good, bad) {
+    if (confirm(question)) {
+        good();
+    }
+    else {
+        bad();
+    }
+}
+function yes() {
+    console.log("All good");
+}
+ function no() {
+     console.log("Fuck it");
+ }
+
+ ask("How is it?", yes, no);
