@@ -1,6 +1,10 @@
 let tommy = document.getElementsByTagName('button')[1];
 tommy.style.backgroundColor = "#ccc210";
 
+function designChange() {
+    document.getElementById('header').style.backgroundColor = 'green';
+}
+
 let rep = new Array('wow man', ' Far Out');
 
 
@@ -118,11 +122,16 @@ let moto = {
     name: 'Julia',
     owner: 'TommyD',
     year: 2014,
-    wheels: 2
+    wheels: 2    
 }
+for (bike in moto) {
+    document.getElementById('divtdi').innerHTML += moto[bike];
+}
+document.getElementById('divtdi').style.backgroundColor = "black";
 
 
-document.getElementById('divtdi').innerHTML = moto;
+
+
 
 function Car(year, owner, maker) {
     this.year = year;
