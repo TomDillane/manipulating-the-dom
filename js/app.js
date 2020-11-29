@@ -88,6 +88,7 @@ console.log(multiply(2,7));
 
 document.getElementById('divtd').innerHTML = '</h3>YAYAYAY</h3>';
 document.getElementById('divtd').style.backgroundColor = 'green';
+document.getElementById('divtd').style.textTransform = 'lowercase';
 
 function ask(question, good, bad) {
     if (confirm(question)) {
@@ -98,10 +99,48 @@ function ask(question, good, bad) {
     }
 }
 function yes() {
-    console.log("All good");
+    document.getElementById('divtd').style.backgroundColor = 'blue';
 }
- function no() {
-     console.log("Fuck it");
- }
+function no() {
+    document.getElementById('divtd').style.backgroundColor = 'pink';
+}
 
- ask("How is it?", yes, no);
+ask("How is it?", yes, no);
+
+function hello() {
+    let greeting = "Hello";
+    console.log(greeting);
+}
+
+hello();
+
+let moto = {
+    name: 'Julia',
+    owner: 'TommyD',
+    year: 2014,
+    wheels: 2
+}
+
+
+document.getElementById('divtdi').innerHTML = moto;
+
+function Car(year, owner, maker) {
+    this.year = year;
+    this.owner = owner;
+    this.maker = maker;
+    this.speak = function() {
+        console.log('vroom');
+    }
+}
+let myCar = new Car ('65', 'TommyD', 'Suzuki');
+    console.log(myCar.owner, myCar.year);
+    myCar.speak();
+
+    let fruit = {
+	type: "banana",
+	humanize: function() {
+		console.log(`Although I am ${this.type}, I can still talk!`);
+	}
+};
+
+fruit.humanize();
