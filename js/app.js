@@ -1,4 +1,4 @@
-let tommy = document.getElementsByTagName('button')[1];
+let tommy = document.getElementsByTagName('button')[3];
 tommy.style.backgroundColor = "#ccc210";
 
 function designChange() {
@@ -94,7 +94,7 @@ document.getElementById('divtd').innerHTML = '</h3>YAYAYAY</h3>';
 document.getElementById('divtd').style.backgroundColor = 'green';
 document.getElementById('divtd').style.textTransform = 'lowercase';
 
-function ask(question, good, bad) {
+/*function ask(question, good, bad) {
     if (confirm(question)) {
         good();
     }
@@ -109,7 +109,7 @@ function no() {
     document.getElementById('divtd').style.backgroundColor = 'pink';
 }
 
-ask("How is it?", yes, no);
+ask("How is it?", yes, no); */
 
 function hello() {
     let greeting = "Hello";
@@ -153,3 +153,22 @@ let myCar = new Car ('65', 'TommyD', 'Suzuki');
 };
 
 fruit.humanize();
+
+function games() {
+    let el = document.getElementById('game');
+    let currentCount = el.innerText;
+
+    if (currentCount ==  0) {
+        alert('You have won');     
+      }  else {
+            el.innerText = -- currentCount;
+        }
+}
+
+function lightOn() {
+    document.getElementById('bulb').src = 'img/on.png';
+}
+
+function lightOff() {
+    document.getElementById('bulb').src = 'img/off.png';
+}
