@@ -1,4 +1,4 @@
-let tommy = document.getElementsByTagName('button')[3];
+let tommy = document.getElementsByTagName('button')[5];
 tommy.style.backgroundColor = "#ccc210";
 
 function designChange() {
@@ -171,4 +171,26 @@ function lightOn() {
 
 function lightOff() {
     document.getElementById('bulb').src = 'img/off.png';
+}
+
+document.addEventListener("keyup", function(event) {
+
+if (event.key == "l" || event.key == "L") {
+lightTheme();
+}
+if (event.key == "d" || event.key == "D") {
+darkTheme();
+}
+});
+
+function lightTheme() {
+    th = document.getElementById('para');
+    th.classList.remove("dark");
+    th.classList.add("light");
+}
+
+function darkTheme() {
+    th = document.getElementById('para');
+    th.classList.remove("light");
+    th.classList.add("dark");
 }

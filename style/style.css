@@ -13,17 +13,18 @@
 }
 
 #light {
-    background-color: green;
+    background-color: gray;
     color: white;
     width: 60px;
     height: 60px;
 }
 
 #dark {
-    background-color: red;
+    background-color: gray;
     color: white;
     width: 60px;
     height: 60px;
+}
 
 #bulb {
     height: 300px;
@@ -37,3 +38,5 @@
 .dark {
     background-color: purple;
 }
+
+
