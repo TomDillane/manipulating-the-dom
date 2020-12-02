@@ -194,3 +194,27 @@ function darkTheme() {
     th.classList.remove("light");
     th.classList.add("dark");
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    displayTime();
+});
+
+function displayTime() {
+    let ti = document.getElementById('time');
+    let now = new Date();
+    ti.innerText = now;
+}
+
+document.addEventListener("keyup", function(event) {
+    if (event.key == "t" || event.key == "T") {
+        tomtheme();
+    }
+
+    function tomtheme() {
+        let todi = document.getElementById('tommyd15');
+        let conte = "Tommy D rocks at this!!!";
+        todi.innerText = conte;
+        todi.classList.add('todii');
+    }
+    
+})
